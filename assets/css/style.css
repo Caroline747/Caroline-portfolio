@@ -134,33 +134,33 @@ figure figcaption {
   color: #555;
 }
 
-/* SEÇÃO SAIBA MAIS */
-.about {
+/* SEÇÃO SOBRE MIM */
+.sobre-mim {
   text-align: center;
   padding: 4rem 2rem;
   background: var(--cor-secundaria);
 }
 
-.about h2 {
+.sobre-mim h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--cor-branco);
 }
 
-.about p {
+.sobre-mim p {
   max-width: 700px;
   margin: 0 auto;
   color: var(--cor-branco);
 }
 
-/* FEATURES */
-.features {
+/* TECNOLOGIAS */
+.tecnologias {
   display: flex;
   justify-content: center;
   margin: 3rem 0;
 }
 
-.features ul {
+.tecnologias ul {
   list-style: none;
   display: flex;
   gap: 1rem;
@@ -171,14 +171,14 @@ figure figcaption {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.features li {
+.tecnologias li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
 }
 
-.features .icon {
+.tecnologias .icon {
   font-size: 1.2rem;
 }
 
@@ -325,7 +325,7 @@ footer p {
   .image-container img {
     max-width: 220px;
   }
-  .features ul {
+  .tecnologias ul {
     flex-direction: column;
     align-items: flex-start;
   }
