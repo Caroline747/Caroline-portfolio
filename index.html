@@ -1,462 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eWatch - Tecnologia Microchip</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #fdfdfd;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
-    /* Hero */
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 2rem;
-      gap: 2rem;
-    }
-
-    main section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .content {
-      flex: 1 1 400px;
-    }
-
-    .content h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .content p {
-      margin-bottom: 1.5rem;
-      max-width: 500px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .btn-primary {
-      background: #000;
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn-primary:hover {
-      background: #333;
-    }
-
-    .btn-secondary {
-      border: 2px solid #ccc;
-      color: #333;
-      padding: 0.8rem 1.5rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .btn-secondary:hover {
-      background: #f0f0f0;
-    }
-
-    /* Imagem com fundo estilizado */
-    .image-container {
-      position: relative;
-      flex: 1 1 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card-bg {
-      position: absolute;
-      width: 280px;
-      height: 320px;
-      border-radius: 20px;
-      background: #ffe599;
-      z-index: 1;
-    }
-
-    .card-bg::after {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: #87cefa;
-      border-radius: 50%;
-      top: -20px;
-      right: -20px;
-      z-index: -1;
-    }
-
-    .image-container img {
-      max-width: 280px;
-      border-radius: 20px;
-      position: relative;
-      z-index: 2;
-    }
-
-    figure {
-      text-align: center;
-    }
-
-    figure figcaption {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* SEÇÃO SAIBA MAIS */
-    .about {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: #f9f9f9;
-    }
-
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-    }
-
-    /* FEATURES */
-    .features {
-      display: flex;
-      justify-content: center;
-      margin: 3rem 0;
-    }
-
-    .features ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      background: #fff;
-      border-radius: 16px;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .features li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-    }
-
-    .features .icon {
-      font-size: 1.2rem;
-    }
-
-    /* Caixa arredondada de projetos */
-.projects-box {
-  margin-top: 2rem;
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.projects-box h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #111;
-}
-
-/* Grid dos projetos */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Card de cada projeto */
-.project-card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-}
-
-.project-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-  color: #222;
-}
-
-.project-card p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-/* Botão dentro do card */
-.btn-project {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn-project:hover {
-  background: #333;
-}
-
-
-    /* CONTATO */
-    .contact {
-      padding: 4rem 2rem;
-      background: #f0f8ff;
-      text-align: center;
-    }
-
-    .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact input, 
-    .contact textarea {
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    .contact button {
-      background: #000;
-      color: #fff;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .contact button:hover {
-      background: #333;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #111;
-      color: #fff;
-    }
-
-    footer p {
-      margin: 0.5rem 0;
-    }
-
-    /* Responsivo */
-    @media (max-width: 768px) {
-      .content h1 {
-        font-size: 2rem;
-      }
-      main {
-        padding: 2rem 1rem;
-      }
-      .card-bg {
-        width: 220px;
-        height: 260px;
-      }
-      .image-container img {
-        max-width: 220px;
-      }
-      .features ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/sinais-de-codigo.png">
+    <title>eWatch - Tecnologia Microchip</title>
 </head>
+
 <body>
-  <!-- Cabeçalho -->
-  <header>
-    <a href="#">eWatch</a>
-    <nav>
-      <ul>
-        <li><a href="#about">Saiba Mais</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="#">eWatch</a>
+        <nav>
+            <ul>
+                <li><a href="#about">Saiba Mais</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero -->
-  <main>
-    <section>
-      <div class="content">
-        <h1>THE eWatch with the newest microchip technology</h1>
+    <!-- Hero -->
+    <main>
+        <section>
+            <div class="content">
+                <h1>THE eWatch with the newest microchip technology</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Faucibus in libero risus semper habitant arcu eget.
+                    Et integer facilisi eget diam.
+                </p>
+                <div class="buttons">
+                    <a href="#" class="btn-primary">Order now</a>
+                    <a href="#about" class="btn-secondary">Explore more</a>
+                </div>
+            </div>
+                <!-- Imagem com fundo -->
+            <figure class="image-container">
+                <div class="card-bg"></div>
+                <img src="/assets/img/Image group (3).png" alt="Pessoa usando o eWatch">
+            </figure>
+            </div>
+
+            <!-- Features -->
+            <section id="features" class="features">
+                <ul>
+                    <li><span class="icon">★</span> Alta performance</li>
+                    <li><span class="icon">⚡</span> Bateria duradoura</li>
+                    <li><span class="icon">📱</span> Conectividade total</li>
+                    <li><span class="icon">🌐</span> Tecnologia global</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <!-- Saiba Mais -->
+    <section id="about" class="about">
+        <h2>Saiba Mais</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Faucibus in libero risus semper habitant arcu eget. 
-          Et integer facilisi eget diam.
+            O eWatch é o smartwatch mais avançado do mercado, equipado com o
+            mais novo microchip de alto desempenho. Design moderno, bateria
+            de longa duração e recursos inteligentes para o seu dia a dia.
         </p>
-        <div class="buttons">
-          <a href="#" class="btn-primary">Order now</a>
-          <a href="#about" class="btn-secondary">Explore more</a>
-        </div>
-      </div>
-
-      <!-- Imagem com fundo -->
-      <figure class="image-container">
-        <div class="card-bg"></div>
-        <img src="sua-imagem.jpg" alt="Pessoa usando o eWatch">
-        <figcaption>Experimente a nova geração de smartwatches</figcaption>
-      </figure>
     </section>
-  </main>
 
-  <!-- Saiba Mais -->
-  <section id="about" class="about">
-    <h2>Saiba Mais</h2>
-    <p>
-      O eWatch é o smartwatch mais avançado do mercado, equipado com o 
-      mais novo microchip de alto desempenho. Design moderno, bateria 
-      de longa duração e recursos inteligentes para o seu dia a dia.
-    </p>
-  </section>
+    <!-- Caixa arredondada com projetos -->
+    <div class="projects-box">
+        <h2>Meus Projetos</h2>
+        <div class="projects-grid">
 
-  <!-- Features -->
-  <section id="features" class="features">
-    <ul>
-      <li><span class="icon">★</span> Alta performance</li>
-      <li><span class="icon">⚡</span> Bateria duradoura</li>
-      <li><span class="icon">📱</span> Conectividade total</li>
-      <li><span class="icon">🌐</span> Tecnologia global</li>
-    </ul>
-  </section>
+            <!-- Card 1 -->
+            <div class="project-card">
+                <img src="projeto1.jpg" alt="Loja Online">
+                <h3>Loja Online</h3>
+                <p>Site de ecommerce feito com WordPress e Elementor.</p>
+                <a href="#" class="btn-project">Ver Projeto</a>
+            </div>
 
-   <!-- Caixa arredondada com projetos -->
-  <div class="projects-box">
-    <h2>Meus Projetos</h2>
-    <div class="projects-grid">
+            <!-- Card 2 -->
+            <div class="project-card">
+                <img src="projeto2.jpg" alt="Portfólio">
+                <h3>Portfólio</h3>
+                <p>Site responsivo em HTML, CSS e Bootstrap.</p>
+                <a href="#" class="btn-project">Ver Projeto</a>
+            </div>
 
-      <!-- Card 1 -->
-      <div class="project-card">
-        <img src="projeto1.jpg" alt="Loja Online">
-        <h3>Loja Online</h3>
-        <p>Site de ecommerce feito com WordPress e Elementor.</p>
-        <a href="#" class="btn-project">Ver Projeto</a>
-      </div>
+            <!-- Card 3 -->
+            <div class="project-card">
+                <img src="projeto3.jpg" alt="Blog Tech">
+                <h3>Blog Tech</h3>
+                <p>Blog sobre tecnologia, feito com PHP e MySQL.</p>
+                <a href="#" class="btn-project">Ver Projeto</a>
+            </div>
 
-      <!-- Card 2 -->
-      <div class="project-card">
-        <img src="projeto2.jpg" alt="Portfólio">
-        <h3>Portfólio</h3>
-        <p>Site responsivo em HTML, CSS e Bootstrap.</p>
-        <a href="#" class="btn-project">Ver Projeto</a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="project-card">
-        <img src="projeto3.jpg" alt="Blog Tech">
-        <h3>Blog Tech</h3>
-        <p>Blog sobre tecnologia, feito com PHP e MySQL.</p>
-        <a href="#" class="btn-project">Ver Projeto</a>
-      </div>
-
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
-  <!-- Contato -->
-  <section id="contact" class="contact">
-    <h2>Entre em Contato</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu email" required>
-      <textarea rows="4" placeholder="Sua mensagem"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu email" required>
+            <textarea rows="4" placeholder="Sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 eWatch Company. Todos os direitos reservados.</p>
-    <p>Feito com ❤️ por Caroline</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 eWatch Company. Todos os direitos reservados.</p>
+        <p>Feito com ❤️ por Caroline</p>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
+
 </html>
