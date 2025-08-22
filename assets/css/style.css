@@ -1,8 +1,10 @@
 :root {
-  --cor-principal: #f8e081;
-  --cor-secundaria: #8c9ff3;
+  --cor-principal: #f4c2c2;
+  --cor-secundaria: #4b2e83;
   --cor-preto: #111;
   --cor-branco: #fff;
+  --cor-fundo: #c59797;
+  --cor-cinza: #888;
 }
 
 * {
@@ -23,8 +25,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8c9ff3;
+  background: var(--cor-secundaria);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+header a {
+  color: var(--cor-branco);
+  text-decoration: none;
 }
 
 nav ul {
@@ -35,7 +42,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--cor-branco);
   font-weight: bold;
 }
 
@@ -80,8 +87,8 @@ main section {
 }
 
 .btn-primary {
-  background: #000;
-  color: #fff;
+  background: var(--cor-secundaria);
+  color: var(--cor-branco);
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   text-decoration: none;
@@ -90,12 +97,12 @@ main section {
 }
 
 .btn-primary:hover {
-  background: #333;
+  background: var(--cor-fundo);
 }
 
 .btn-secondary {
-  border: 2px solid #ccc;
-  color: #333;
+  border: 2px solid var(--cor-secundaria);
+  color: var(--cor-secundaria);
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   text-decoration: none;
@@ -104,7 +111,7 @@ main section {
 }
 
 .btn-secondary:hover {
-  background: #f0f0f0;
+  background: var(--cor-branco);
 }
 
 /* Imagem com fundo estilizado */
@@ -128,11 +135,6 @@ figure {
   text-align: center;
 }
 
-figure figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
 
 /* SEÇÃO SOBRE MIM */
 .sobre-mim {
@@ -165,7 +167,7 @@ figure figcaption {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  background: #fff;
+  background: var(--cor-branco);
   border-radius: 16px;
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -195,7 +197,7 @@ figure figcaption {
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   text-align: center;
-  color: #111;
+  color: var(--cor-secundaria);
 }
 
 /* Grid dos projetos */
@@ -207,7 +209,7 @@ figure figcaption {
 
 /* Card de cada projeto */
 .project-card {
-  background: #f9f9f9;
+  background: var(--cor-branco);
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
@@ -230,20 +232,20 @@ figure figcaption {
 .project-card h3 {
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
-  color: #222;
+  color: var(--cor-secundaria);
 }
 
 .project-card p {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--cor-secundaria);
   margin-bottom: 1rem;
 }
 
 /* Botão dentro do card */
 .btn-project {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: var(--cor-secundaria);
+  color: var(--cor-branco);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -253,19 +255,20 @@ figure figcaption {
 }
 
 .btn-project:hover {
-  background: #333;
+  background: var(--cor-fundo);
 }
 
 /* CONTATO */
 .contact {
   padding: 4rem 2rem;
-  background: #8c9ff3;
+  background: var(--cor-secundaria);
   text-align: center;
 }
 
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--cor-branco);
 }
 
 .contact form {
@@ -284,8 +287,8 @@ figure figcaption {
 }
 
 .contact button {
-  background: #000;
-  color: #fff;
+  background: var(--cor-principal);
+  color: var(--cor-secundaria);
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
