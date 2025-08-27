@@ -102,12 +102,13 @@
     <!-- Contato -->
     <section id="contact" class="contact">
         <h2>Entre em Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu email" required>
-            <textarea rows="4" placeholder="Sua mensagem"></textarea>
+        <form id="contatoForm">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
             <button type="submit">Enviar</button>
         </form>
+        <div id="status"></div>
     </section>
 
     <!-- Footer -->
