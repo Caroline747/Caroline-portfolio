@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           sender: { name: nome, email: email },
-          to: [{ email: "caroldeveloperfe@gmail.com", name: "Caroline" }],
+          to: [{ email: "seuemail@seudominio.com", name: "Seu Nome" }],
           subject: "Nova mensagem do formulário",
           htmlContent: `
             <p><strong>Nome:</strong> ${nome}</p>
