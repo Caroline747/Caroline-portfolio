@@ -309,6 +309,20 @@ figure {
   background: #333;
 }
 
+.msg {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
 /* FOOTER */
 footer {
   text-align: center;

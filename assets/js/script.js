@@ -1,23 +1,29 @@
-document.getElementById("contatoForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = {
-    nome: form.nome.value,
-    email: form.email.value,
-    mensagem: form.mensagem.value
-  };
+// Inicialize com seu User ID (do painel da EmailJS)
+    emailjs.init("pjGsV2By3WOJKtM28");
 
-  const res = await fetch("/api/send-email", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  });
+    const form = document.getElementById("contactForm");
+    const msgBox = document.getElementById("formMsg");
+    const btn = form.querySelector("button");
 
-  const result = await res.json();
-  document.getElementById("status").innerHTML = 
-    result.success 
-      ? `<span style="color:green;">${result.message}</span>` 
-      : `<span style="color:red;">${result.message}</span>`;
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-  if (result.success) form.reset();
-});
+      msgBox.textContent = "Enviando...";
+      msgBox.className = "msg";
+      btn.disabled = true;
+
+      emailjs.sendForm("service_lex4xjn", "template_b4fovbc", this)
+        .then(() => {
+          msgBox.textContent = "Mensagem enviada com sucesso!";
+          msgBox.className = "msg success";
+          form.reset();
+        })
+        .catch(err => {
+          console.error("Erro:", err);
+          msgBox.textContent = "Erro ao enviar. Tente novamente.";
+          msgBox.className = "msg error";
+        })
+        .finally(() => {
+          btn.disabled = false;
+        });
+    });

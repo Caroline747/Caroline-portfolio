@@ -100,15 +100,15 @@
     </div>
 
     <!-- Contato -->
-    <section id="contact" class="contact">
+    <section id="contactForm" class="contact">
         <h2>Entre em Contato</h2>
         <form id="contatoForm">
             <input type="text" name="nome" placeholder="Seu nome" required>
             <input type="email" name="email" placeholder="Seu email" required>
             <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required></textarea>
             <button type="submit">Enviar</button>
+            <div id="formMsg" class="msg"></div>
         </form>
-        <div id="status"></div>
     </section>
 
     <!-- Footer -->
@@ -119,7 +119,8 @@
     <!-- voltar ao topo -->
 
     <script src="/assets/js/script.js"></script>
-    <script src="/api/send-email.js"></script>
+    <!-- Biblioteca EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </body>
 
 </html>
