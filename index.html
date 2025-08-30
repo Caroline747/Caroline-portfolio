@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/img/sinais-de-codigo.png">
+    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>CodeWeb - Caroline Araújo</title>
 </head>
@@ -28,9 +29,8 @@
             <div class="content">
                 <h1>Caroline Araújo</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Faucibus in libero risus semper habitant arcu eget.
-                    Et integer facilisi eget diam.
+                    Sou desenvolvedora Front-End apaixonada por criar interfaces modernas, 
+                    responsivas e que proporcionam experiências digitais incríveis para os usuários.
                 </p>
                 <div class="buttons">
                     <a href="#" class="btn-primary">Baixar Currículo</a>
@@ -57,12 +57,14 @@
     </main>
 
     <!-- Sobre Mim -->
-    <section id="sobre-mim" class="sobre-mim">
+    <section id="sobre-mim" class="sobre-mim" data-aos="fade-up">
         <h2>Sobre Mim</h2>
         <p>
-            O eWatch é o smartwatch mais avançado do mercado, equipado com o
-            mais novo microchip de alto desempenho. Design moderno, bateria
-            de longa duração e recursos inteligentes para o seu dia a dia.
+            Desde cedo, sempre fui fascinada por como a tecnologia transforma o dia a dia das pessoas. Hoje, como desenvolvedora Front-End, 
+            transformo ideias em websites interativos e responsivos, combinando estética, performance e usabilidade em cada projeto. 
+            Trabalho com HTML, CSS, JavaScript, WordPress, Bootstrap, PHP e SQL para criar soluções completas, e atualmente estou aprofundando
+            meus conhecimentos em React para desenvolver aplicações ainda mais modernas e dinâmicas. Meu objetivo é criar experiências 
+            digitais que realmente façam a diferença para usuários e empresas.
         </p>
     </section>
 
@@ -119,8 +121,18 @@
     <!-- voltar ao topo -->
 
     <script src="/assets/js/script.js"></script>
+    <script src="../../assets/vendor/aos/dist/aos.js"></script>
     <!-- Biblioteca EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+  $(document).on('ready', function () {
+    // initialization of aos
+    AOS.init({
+      duration: 650,
+      once: true
+    });
+  });
+</script>
 </body>
 
 </html>
