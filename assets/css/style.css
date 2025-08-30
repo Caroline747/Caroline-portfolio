@@ -25,10 +25,10 @@ body {
 }
 
 header {
-  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 50%;
   background: var(--cor-secundaria);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -132,7 +132,6 @@ main section {
 }
 
 .image-container img {
-  max-width: 280px;
   border-radius: 20px;
   position: relative;
   z-index: 2;
