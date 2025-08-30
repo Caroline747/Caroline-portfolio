@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/img/sinais-de-codigo.png">
-    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>CodeWeb - Caroline Araújo</title>
 </head>
@@ -17,8 +17,8 @@
         <img src="/assets/img/logoweb.png" alt="CodeWeb" width="100" height="100">
         <nav>
             <ul>
-                <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#projects-box">Projetos</a></li>
+                <li><a href="#contactForm">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,9 @@
                     responsivas e que proporcionam experiências digitais incríveis para os usuários.
                 </p>
                 <div class="buttons">
-                    <a href="#" class="btn-primary">Baixar Currículo</a>
+                    <a href="/docs/Curriculo TI 2.pdf" download>
+                        <button class="btn-primary">Baixar Currículo</button>
+                    </a>
                     <a href="#sobre-mim" class="btn-secondary">Sobre Mim</a>
                 </div>
             </div>
@@ -50,7 +52,7 @@
                     <li><i class="fas fa-code"></i> JavaScript</li>
                     <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
                     <li><i class="fab fa-php"></i> PHP</li>
-                    <li><i class="fab fa-wordpress"></i> WordPress</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
                 </ul>
             </section>
         </section>
@@ -63,37 +65,53 @@
             Desde cedo, sempre fui fascinada por como a tecnologia transforma o dia a dia das pessoas. Hoje, como desenvolvedora Front-End, 
             transformo ideias em websites interativos e responsivos, combinando estética, performance e usabilidade em cada projeto. 
             Trabalho com HTML, CSS, JavaScript, WordPress, Bootstrap, PHP e SQL para criar soluções completas, e atualmente estou aprofundando
-            meus conhecimentos em React para desenvolver aplicações ainda mais modernas e dinâmicas. Meu objetivo é criar experiências 
+            meus conhecimentos em React e Tailwind para desenvolver aplicações ainda mais modernas e dinâmicas. Meu objetivo é criar experiências 
             digitais que realmente façam a diferença para usuários e empresas.
         </p>
     </section>
 
     <!-- Caixa arredondada com projetos -->
-    <div class="projects-box">
+    <div class="projects-box" id="projects-box" data-aos="fade-up">
         <h2>Meus Projetos</h2>
         <div class="projects-grid">
 
             <!-- Card 1 -->
             <div class="project-card">
                 <img src="/assets/img/WhatsApp Image 2025-08-17 at 16.33.56 (4).jpeg" alt="Loja Online">
-                <h3>Loja Online</h3>
-                <p>Site de ecommerce feito com WordPress e Elementor.</p>
+                <h3>Site para Assistência Técnica – Wcel</h3>
+                <p>Desenvolvi um site moderno e responsivo para uma assistência técnica de celulares, 
+                com painel administrativo para gerenciar serviços e produtos, integração com WhatsApp e formulário de contato.</p>
+                <p><b>Tecnologias:</b> HTML, CSS, JavaScript, PHP, SQL</p>
                 <a href="#" class="btn-project">Ver Projeto</a>
             </div>
 
             <!-- Card 2 -->
             <div class="project-card">
                 <img src="/assets/img/WhatsApp Image 2025-08-17 at 16.33.56 (4).jpeg" alt="Portfólio">
-                <h3>Portfólio</h3>
-                <p>Site responsivo em HTML, CSS e Bootstrap.</p>
+                <h3>Site Doce Pudim</h3>
+                <p>Desenvolvi um site moderno e responsivo para a marca Doce Pudim, 
+                destacando produtos, promoções e contato de forma clara e atrativa para os clientes.</p>
+                <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Tailwind e React</p>
                 <a href="#" class="btn-project">Ver Projeto</a>
             </div>
 
             <!-- Card 3 -->
             <div class="project-card">
                 <img src="/assets/img/WhatsApp Image 2025-08-17 at 16.33.56 (4).jpeg" alt="Blog Tech">
-                <h3>Blog Tech</h3>
-                <p>Blog sobre tecnologia, feito com PHP e MySQL.</p>
+                <h3>Checkout de Pagamento</h3>
+                <p>Desenvolvi um checkout de pagamento moderno e responsivo, permitindo que os 
+                usuários preencham suas informações de forma simples e segura, com campos de dados pessoais e do cartão.</p>
+                <p><b>Tecnologias:</b> HTML, CSS, JavaScript</p>
+                <a href="#" class="btn-project">Ver Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <img src="/assets/img/WhatsApp Image 2025-08-17 at 16.33.56 (4).jpeg" alt="Blog Tech">
+                <h3>Site Gêmeos Saúde</h3>
+                <p>Atualmente estou desenvolvendo um site institucional para a Gêmeos Saúde, com foco em apresentar 
+                os serviços da empresa e melhorar a comunicação com os clientes. O projeto está sendo feito no WordPress, 
+                garantindo um layout responsivo e fácil de gerenciar.</p>
+                <p><b>Tecnologias:</b> WordPress, Elementor</p>
                 <a href="#" class="btn-project">Ver Projeto</a>
             </div>
 
@@ -121,18 +139,18 @@
     <!-- voltar ao topo -->
 
     <script src="/assets/js/script.js"></script>
-    <script src="../../assets/vendor/aos/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    // Inicializar o AOS
+    AOS.init({
+      duration: 1000, // Duração da animação em milissegundos
+      easing: 'ease-in-out', // Tipo de transição
+      once: true // A animação acontece apenas uma vez
+    });
+    </script>
+
     <!-- Biblioteca EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script>
-  $(document).on('ready', function () {
-    // initialization of aos
-    AOS.init({
-      duration: 650,
-      once: true
-    });
-  });
-</script>
 </body>
 
 </html>
