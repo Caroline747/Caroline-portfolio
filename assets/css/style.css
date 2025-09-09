@@ -174,9 +174,18 @@ figure {
 
 /* SEÇÃO SOBRE MIM */
 .sobre-mim {
-  text-align: center;
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   background: var(--cor-secundaria);
+  padding: 3rem 2rem;
+}
+
+.sobre-mim-text {
+  max-width: 600px;
+  text-align: left;
 }
 
 .sobre-mim h2 {
@@ -186,11 +195,9 @@ figure {
 }
 
 .sobre-mim p {
-  padding: 1rem;
-  text-align: justify;
-  max-width: 700px;
-  margin: 0 auto;
   color: var(--cor-branco);
+  text-align: start;
+  padding: 1rem 0;
 }
 
 
@@ -270,59 +277,22 @@ figure {
 
 /* CONTATO */
 .contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 4rem 2rem;
   background: var(--cor-secundaria);
   text-align: center;
 }
 
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.contact h1, .contact p {
+  font-size: 1.8rem;
+  text-align: end;
   color: var(--cor-branco);
 }
 
-.contact form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact input,
-.contact textarea {
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.contact button {
-  background: var(--cor-principal);
-  color: var(--cor-secundaria);
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.contact button:hover {
-  background: #333;
-}
-
-.msg {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.success {
-  color: green;
-}
-
-.error {
-  color: red;
+.contact-info, .contact-qrcode {
+  margin: 1rem 0;
 }
 
 /* FOOTER */
@@ -372,6 +342,47 @@ footer p {
   .image-container img {
     max-width: 100%;
     height: auto;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .contact-qrcode img {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact h1, .contact p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .sobre-mim {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .sobre-mim-img img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .sobre-mim-text {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
   }
 }
 

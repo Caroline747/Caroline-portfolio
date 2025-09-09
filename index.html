@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="#projects-box">Projetos</a></li>
-                <li><a href="#contactForm">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -60,7 +60,13 @@
 
     <!-- Sobre Mim -->
     <section id="sobre-mim" class="sobre-mim" data-aos="fade-up">
-        <h2>Sobre Mim</h2>
+
+        <div class="sobre-mim-img">
+            <img src="/assets/img/Entre.png" alt="Sobre Mim" width="450" height="300">
+        </div>
+
+        <div class="sobre-mim-text" data-aos="fade-up">
+            <h2>Sobre Mim</h2>
         <p>
             Desde cedo, sempre fui fascinada por como a tecnologia transforma o dia a dia das pessoas. Hoje, como desenvolvedora Front-End, 
             transformo ideias em websites interativos e responsivos, combinando estética, performance e usabilidade em cada projeto. 
@@ -68,6 +74,7 @@
             meus conhecimentos em React e Tailwind para desenvolver aplicações ainda mais modernas e dinâmicas. Meu objetivo é criar experiências 
             digitais que realmente façam a diferença para usuários e empresas.
         </p>
+        </div>
     </section>
 
     <!-- Caixa arredondada com projetos -->
@@ -120,15 +127,15 @@
     </div>
 
     <!-- Contato -->
-    <section id="contactForm" class="contact">
-        <h2>Entre em Contato</h2>
-        <form id="contatoForm">
-            <input type="text" name="user_name" placeholder="Seu nome" required>
-            <input type="email" name="user_email" placeholder="Seu email" required>
-            <textarea name="message" rows="4" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-            <div id="formMsg" class="msg"></div>
-        </form>
+    <section class="contact" id="contato">
+        <div class="contact-qrcode" data-aos="fade-up">
+            <img src="/assets/img/QR.svg" alt="qr code" width="450" height="450">
+        </div>
+
+        <div class="contact-info" data-aos="fade-up">
+            <h1>Entre em contato comigo através do QR code</h1>
+            <p>Estou disponível para novos projetos e oportunidades. Vamos conversar!</p>
+        </div>
     </section>
 
     <!-- Footer -->
