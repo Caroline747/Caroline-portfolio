@@ -295,6 +295,28 @@ figure {
   margin: 1rem 0;
 }
 
+.btn-contato {
+  display: inline-block;
+  background: linear-gradient(90deg, #5B57EB 60%, #F8B3B8 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(91, 87, 235, 0.15);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 1px;
+}
+
+.btn-contato:hover {
+  background: linear-gradient(90deg, #F8B3B8 60%, #5B57EB 100%);
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(91, 87, 235, 0.25);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
