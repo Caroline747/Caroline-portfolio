@@ -611,6 +611,10 @@ main section {
   .footer-7-col {
     text-align: center;
   }
+
+  .footer-7-social {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 900px) {
