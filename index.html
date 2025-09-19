@@ -42,7 +42,7 @@
                 <!-- Imagem com fundo -->
             <figure class="image-container">
                 <div class="card-bg"></div>
-                <img src="/assets/img/Image group.png" alt="foto" width="400" height="450">
+                <img src="/assets/img/2.png" alt="foto" width="550" height="550">
             </figure>
             </div>
 
@@ -77,12 +77,10 @@
         </div>
     </section>
 
-    <!-- Caixa arredondada com projetos -->
     <div class="projects-box" id="projects-box" data-aos="fade-up">
         <h2>Meus Projetos</h2>
-        <div class="projects-grid">
 
-            <!-- Card 1 -->
+        <div class="projects-grid">
             <div class="project-card">
                 <img src="/assets/img/wce.png" alt="Loja Online">
                 <h3>Site para Assistência Técnica – Wcel</h3>
@@ -92,7 +90,6 @@
                 <a href="https://www.wcelgsm.com.br/" class="btn-project" target="_blank">Ver Projeto</a>
             </div>
 
-            <!-- Card 2 -->
             <div class="project-card">
                 <img src="/assets/img/pudim.png" alt="Portfólio">
                 <h3>Site Doce Pudim</h3>
@@ -102,7 +99,6 @@
                 <a href="https://docepudim.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
             </div>
 
-            <!-- Card 3 -->
             <div class="project-card">
                 <img src="/assets/img/pagament.png" alt="Blog Tech">
                 <h3>Checkout de Pagamento</h3>
@@ -121,46 +117,66 @@
                 <p><b>Tecnologias:</b> WordPress, Elementor</p>
                 <a href="https://gemeossaude.org.br/" class="btn-project" target="_blank">Ver Projeto</a>
             </div>
-
         </div>
     </div>
-    </div>
 
-    <!-- Contato -->
-    <section class="contact" id="contato">
-        <div class="contact-qrcode" data-aos="fade-up">
-            <img src="/assets/img/QR.svg" alt="qr code" width="450" height="450">
+    <section class="contact-hero" id="contato">
+        <div class="contact-hero-qrcode" data-aos="fade-right">
+            <img src="/assets/img/QR.svg" alt="QR code para contato" width="260" height="260">
+            <span class="qrcode-caption">Escaneie o QR code para falar comigo no WhatsApp</span>
         </div>
-
-        <div class="contact-info" data-aos="fade-up">
-            <h1>Entre em contato comigo através do QR code</h1>
-            <p>Estou disponível para novos projetos e oportunidades. Vamos conversar!</p>
+        <div class="contact-hero-info" data-aos="fade-left">
+            <h2>Entre em contato</h2>
+            <p class="contact-subtitle">Estou disponível para novos projetos e oportunidades.<br>Vamos conversar!</p>
             <a href="http://wa.me/5531996004320" target="_blank" class="btn-contato">
                 <i class="fab fa-whatsapp"></i> Enviar Mensagem
             </a>
+            <div class="contact-social">
+                <a href="https://www.linkedin.com/in/caroline-araujo-ti/" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/seuusuario" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:seuemail@email.com" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 CodeWeb - Caroline Araújo. Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- voltar ao topo -->
+<footer class="footer-7">
+    <div class="footer-7-container">
+        <div class="footer-7-row">
+            <div class="footer-7-col">
+                <h3>CodeWeb</h3>
+                <p>Desenvolvido por Caroline Araújo.<br>Todos os direitos reservados &copy; 2025</p>
+            </div>
+            <div class="footer-7-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#projects-box">Projetos</a></li>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-7-col">
+                <h4>Redes Sociais</h4>
+                <div class="footer-7-social">
+                    <a href="https://www.linkedin.com/in/caroline-araujo-ti/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="http://wa.me/5531996004320" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <script src="/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
-    // Inicializar o AOS
-    AOS.init({
-      duration: 1000, // Duração da animação em milissegundos
-      easing: 'ease-in-out', // Tipo de transição
-      once: true // A animação acontece apenas uma vez
-    });
+        AOS.init({
+            duration: 1000, 
+            easing: 'ease-in-out', 
+            once: true 
+        });
     </script>
-
-    <!-- Biblioteca EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </body>
-
 </html>

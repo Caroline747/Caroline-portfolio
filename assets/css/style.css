@@ -68,7 +68,6 @@ main {
 main section {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
   max-width: 1200px;
   width: 100%;
@@ -135,17 +134,26 @@ main section {
   border-radius: 20px;
   position: relative;
   z-index: 2;
+  animation: flutuar 3s ease-in-out infinite;
 }
 
-figure {
-  text-align: center;
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  
 }
 
 /* TECNOLOGIAS */
 .tecnologias {
   display: flex;
   justify-content: center;
-  margin: 3rem 0;
 }
 
 .tecnologias ul {
@@ -275,28 +283,50 @@ figure {
   background: var(--cor-fundo);
 }
 
-/* CONTATO */
 .contact {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 4rem 2rem;
   background: var(--cor-secundaria);
+  color: var(--cor-branco);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  gap: 2rem;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--cor-amarelo);
   text-align: center;
 }
 
-.contact h1, .contact p {
-  font-size: 1.8rem;
-  text-align: end;
+.contact-subtitle {
+  font-size: 1.1rem;
   color: var(--cor-branco);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.contact-info, .contact-qrcode {
-  margin: 1rem 0;
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
 }
 
 .btn-contato {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background: linear-gradient(90deg, #5B57EB 60%, #F8B3B8 100%);
   color: #fff;
   padding: 1rem 2rem;
@@ -317,19 +347,208 @@ figure {
   box-shadow: 0 6px 24px rgba(91, 87, 235, 0.25);
 }
 
-/* FOOTER */
-footer {
+.contact-social {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.contact-social a {
+  color: var(--cor-amarelo);
+  font-size: 2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact-social a:hover {
+  color: var(--cor-rosa);
+  transform: scale(1.2);
+}
+
+.contact-qrcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.contact-qrcode img {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  background: var(--cor-branco);
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.qrcode-caption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--cor-amarelo);
   text-align: center;
-  padding: 2rem 1rem;
+}
+
+/* Hero de contato lado a lado no desktop */
+.contact-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  background: var(--cor-secundaria);
+  color: var(--cor-branco);
+  padding: 4rem 2rem;
+}
+
+.contact-hero-qrcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+}
+
+.contact-hero-qrcode img {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  background: var(--cor-branco);
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.qrcode-caption {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  color: var(--cor-amarelo);
+  text-align: center;
+}
+
+.contact-hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  gap: 1.2rem;
+}
+
+.contact-hero-info h2 {
+  font-size: 2.2rem;
+  color: var(--cor-amarelo);
+  margin-bottom: 0.2rem;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--cor-branco);
+  margin-bottom: 0.5rem;
+}
+
+.btn-contato {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #5B57EB 60%, #F8B3B8 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(91, 87, 235, 0.15);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 1px;
+  margin-bottom: 0.7rem;
+}
+
+.btn-contato:hover {
+  background: linear-gradient(90deg, #F8B3B8 60%, #5B57EB 100%);
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(91, 87, 235, 0.25);
+}
+
+.contact-social {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.contact-social a {
+  color: var(--cor-amarelo);
+  font-size: 2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact-social a:hover {
+  color: var(--cor-rosa);
+  transform: scale(1.2);
+}
+
+.footer-7 {
   background: var(--cor-amarelo);
   color: var(--cor-preto);
+  padding: 2.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
 }
 
-footer p {
-  margin: 0.5rem 0;
+.footer-7-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Responsivo */
+.footer-7-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-7-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-7 h3, .footer-7 h4 {
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+}
+
+.footer-7 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-7 ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-7 ul li a {
+  color: var(--cor-preto);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-7 ul li a:hover {
+  color: var(--cor-secundaria);
+}
+
+.footer-7-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-7-social a {
+  color: var(--cor-preto);
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer-7-social a:hover {
+  color: var(--cor-secundaria);
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
 
   header {
@@ -366,29 +585,6 @@ footer p {
     height: auto;
   }
 
-  .contact {
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    gap: 2rem;
-  }
-
-  .contact-qrcode img {
-    width: 250px;
-    height: 250px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .contact-info {
-    text-align: center;
-  }
-
-  .contact h1, .contact p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
   .sobre-mim {
     flex-direction: column;
     text-align: center;
@@ -406,5 +602,30 @@ footer p {
     text-align: center;
     padding: 0;
   }
+
+   .footer-7-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-7-col {
+    text-align: center;
+  }
 }
 
+@media (max-width: 900px) {
+  .contact-hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .contact-hero-info {
+    align-items: center;
+    max-width: 100%;
+  }
+  .contact-hero-qrcode img {
+    width: 120px;
+    height: 120px;
+  }
+}
