@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/img/sinais-de-codigo.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>CodeWeb - Caroline Araújo</title>
 </head>
@@ -68,89 +69,94 @@
         <div class="sobre-mim-text" data-aos="fade-up">
             <h2>Sobre Mim</h2>
         <p>
-            Desde cedo, sempre fui fascinada por como a tecnologia transforma o dia a dia das pessoas. Hoje, como desenvolvedora Front-End, 
-            transformo ideias em websites interativos e responsivos, combinando estética, performance e usabilidade em cada projeto. 
-            Trabalho com HTML, CSS, JavaScript, WordPress, Bootstrap, PHP e SQL para criar soluções completas, e atualmente estou aprofundando
-            meus conhecimentos em React e Tailwind para desenvolver aplicações ainda mais modernas e dinâmicas. Meu objetivo é criar experiências 
-            digitais que realmente façam a diferença para usuários e empresas.
+            Desde muito jovem, sempre fui fascinado por como a tecnologia pode 
+            mudar a maneira como as pessoas levam a vida. Hoje, sou um desenvolvedor 
+            Front-End que transforma ideias em websites responsivos e interativos. Combinando estética, 
+            performance e usabilidade em todos os projetos que realizo. Sou competente em HTML, CSS, 
+            JavaScript, WordPress, Bootstrap, PHP e SQL e, atualmente, estou ampliando meu conhecimento 
+            em React e Tailwind para criar aplicações muito mais modernas e ágeis. 
         </p>
         </div>
     </section>
 
-    <div class="projects-box" id="projects-box" data-aos="fade-up">
-        <h2>Meus Projetos</h2>
 
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="/assets/img/wce.png" alt="Loja Online">
-                <h3>Site para Assistência Técnica – Wcel</h3>
-                <p>Desenvolvi um site moderno e responsivo para uma assistência técnica de celulares, 
-                com painel administrativo para gerenciar produtos e integração com WhatsApp.</p>
-                <p><b>Tecnologias:</b> HTML, CSS, JavaScript, PHP, SQL</p>
-                <a href="https://www.wcelgsm.com.br/" class="btn-project" target="_blank">Ver Projeto</a>
-            </div>
+<div class="projects-box" id="projects-box" data-aos="fade-up">
+  <h2>Meus Projetos</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide project-card">
+        <img src="/assets/img/wce.png" alt="Loja Online">
+        <h3>Site para Assistência Técnica – Wcel</h3>
+        <p>Desenvolvi um site moderno e responsivo para uma assistência técnica de celulares, 
+        com painel administrativo para gerenciar produtos e integração com WhatsApp.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript, PHP, SQL</p>
+        <a href="https://www.wcelgsm.com.br/" class="btn-project" target="_blank">Ver Projeto</a>
+      </div>
 
-            <div class="project-card">
-                <img src="/assets/img/pudim.png" alt="Portfólio">
-                <h3>Site Doce Pudim</h3>
-                <p>Desenvolvi um site moderno e responsivo para a marca Doce Pudim, 
-                destacando produtos, promoções e contato de forma clara e atrativa para os clientes.</p>
-                <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Tailwind e React</p>
-                <a href="https://docepudim.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
-            </div>
+      <div class="swiper-slide project-card">
+        <img src="/assets/img/pudim.png" alt="Portfólio">
+        <h3>Site Doce Pudim</h3>
+        <p>Desenvolvi um site moderno e responsivo para a marca Doce Pudim, 
+        destacando produtos, promoções e contato de forma clara e atrativa para os clientes.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Tailwind e React</p>
+        <a href="https://docepudim.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
+      </div>
 
-            <div class="project-card">
-                <img src="/assets/img/pagament.png" alt="Blog Tech">
-                <h3>Checkout de Pagamento</h3>
-                <p>Desenvolvi um checkout de pagamento moderno e responsivo, permitindo que os 
-                usuários preencham suas informações de forma simples e segura, com campos de dados pessoais e do cartão.</p>
-                <p><b>Tecnologias:</b> HTML, CSS, JavaScript</p>
-                <a href="https://checkout-beta-three.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
-            </div>
+      <div class="swiper-slide project-card">
+        <img src="/assets/img/pagament.png" alt="Blog Tech">
+        <h3>Checkout de Pagamento</h3>
+        <p>Página de checkout de pagamento moderno e responsivo, permitindo que os 
+        usuários preencham suas informações de forma simples e segura, com campos de dados pessoais e do cartão.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript</p>
+        <a href="https://checkout-beta-three.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
+      </div>
 
-            <div class="project-card">
-                <img src="/assets/img/saude.png" alt="Blog Tech">
-                <h3>Site Gêmeos Saúde</h3>
-                <p>Atualmente estou desenvolvendo um site institucional para a Gêmeos Saúde, com foco em apresentar 
-                os serviços da empresa e melhorar a comunicação com os clientes. O projeto está sendo feito no WordPress, 
-                garantindo um layout responsivo e fácil de gerenciar.</p>
-                <p><b>Tecnologias:</b> WordPress, Elementor</p>
-                <a href="https://gemeossaude.org.br/" class="btn-project" target="_blank">Ver Projeto</a>
-            </div>
+      <div class="swiper-slide project-card">
+        <img src="/assets/img/saude.png" alt="Blog Tech">
+        <h3>Site Gêmeos Saúde</h3>
+        <p>Atualmente estou desenvolvendo um site institucional para a Gêmeos Saúde, com foco em apresentar 
+        os serviços da empresa e melhorar a comunicação com os clientes.</p>
+        <p><b>Tecnologias:</b> WordPress, Elementor</p>
+        <a href="https://gemeossaude.org.br/" class="btn-project" target="_blank">Ver Projeto</a>
+      </div>
 
-            <div class="project-card">
-                <img src="/assets/img/teurapeuta.png" alt="Blog Tech">
-                <h3>Site Master Terapeuta</h3>
-                <p>Este site de portfólio apresenta uma abordagem profissional e acolhedora voltada para a área terapêutica. 
-                    Com um design moderno e responsivo, ele destaca os principais serviços oferecidos, transmitindo 
-                    confiança e seriedade. A navegação é intuitiva, com seções bem estruturadas, o que facilita a compreensão 
-                    da proposta de valor. O uso de cores suaves, tipografia limpa e elementos visuais bem posicionados reforça 
-                    a identidade profissional e proporciona uma experiência agradável ao visitante.</p>
-                <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Tailwind e React</p>
-                <a href="https://Adrienealves.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
-            </div>
-        </div>
+      <div class="swiper-slide project-card">
+        <img src="/assets/img/teurapeuta.png" alt="Blog Tech">
+        <h3>Site Master Terapeuta</h3>
+        <p>Site desenvolvido com uma abordagem profissional e acolhedora voltada para a área terapêutica.
+        Com um design moderno e responsivo, ele destaca os principais serviços oferecidos, transmitindo confiança.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Tailwind e React</p>
+        <a href="https://Adrienealves.vercel.app/" class="btn-project" target="_blank">Ver Projeto</a>
+      </div>
     </div>
 
-    <section class="contact-hero" id="contato">
-        <div class="contact-hero-qrcode" data-aos="fade-right">
-            <img src="/assets/img/QR.svg" alt="QR code para contato" width="260" height="260">
-            <span class="qrcode-caption">Escaneie o QR code para falar comigo no WhatsApp</span>
+    <!-- Botões de navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Paginação -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<section class="contact-hero" id="contato">
+    <div class="contact-hero-qrcode" data-aos="fade-right">
+        <img src="/assets/img/QR.svg" alt="QR code para contato" width="260" height="260">
+        <span class="qrcode-caption">Escaneie o QR code para falar comigo no WhatsApp</span>
+    </div>
+    <div class="contact-hero-info" data-aos="fade-left">
+        <h2>Entre em contato</h2>
+        <p class="contact-subtitle">Estou disponível para novos projetos e oportunidades.<br>Vamos conversar!</p>
+        <a href="http://wa.me/5531996004320" target="_blank" class="btn-contato">
+            <i class="fab fa-whatsapp"></i> Enviar Mensagem
+        </a>
+        <div class="contact-social">
+            <a href="https://www.linkedin.com/in/Caroline747/" target="_blank" title="LinkedIn"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Caroline747" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:karolsamara97@gmail.com" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a>
         </div>
-        <div class="contact-hero-info" data-aos="fade-left">
-            <h2>Entre em contato</h2>
-            <p class="contact-subtitle">Estou disponível para novos projetos e oportunidades.<br>Vamos conversar!</p>
-            <a href="http://wa.me/5531996004320" target="_blank" class="btn-contato">
-                <i class="fab fa-whatsapp"></i> Enviar Mensagem
-            </a>
-            <div class="contact-social">
-                <a href="https://www.linkedin.com/in/Caroline747/" target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Caroline747" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:karolsamara97@gmail.com" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
 <footer class="footer-7">
     <div class="footer-7-container">
@@ -180,15 +186,33 @@
     </div>
 </footer>
 
-    <script src="/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         AOS.init({
             duration: 1000, 
             easing: 'ease-in-out', 
             once: true 
         });
+
+        var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,  /* Mostra 1 projeto por vez */
+                spaceBetween: 20,
+                loop: true, /* Loop infinito */
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 }, /* 2 cards no tablet */
+                    1024: { slidesPerView: 3 }, /* 3 cards no desktop */
+                }
+            });
     </script>
 </body>
 </html>

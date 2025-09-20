@@ -260,8 +260,6 @@ main section {
 }
 
 .project-card p {
-  text-align: justify;
-  font-size: 0.9rem;
   color: var(--cor-preto);
   margin-bottom: 1rem;
 }
