@@ -93,7 +93,6 @@ main section {
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
 }
 
@@ -490,6 +489,8 @@ main section {
   color: var(--cor-preto);
   padding: 2.5rem 1rem 1rem 1rem;
   font-size: 1rem;
+  display: flex;
+  text-align: center;
 }
 
 .footer-7-container {
@@ -528,8 +529,6 @@ main section {
 }
 
 .footer-7-social {
-  display: flex;
-  gap: 1rem;
   margin-top: 0.5rem;
 }
 
@@ -586,6 +585,13 @@ main section {
   .nav {
     flex-direction: column;
     align-items: center;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .tecnologias {
